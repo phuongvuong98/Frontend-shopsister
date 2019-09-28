@@ -1,0 +1,24 @@
+.auth-form {
+  padding: 1rem;
+  /* border: 1px solid #3b0062; */
+  border-radius: 5px;
+  position: fixed;
+  top: 24%;
+  left: 43%;
+  background: white;
+  width: 38%;
+}
+
+@media (max-width: 768px) {
+  .auth-form {
+    width: 54%;
+    left: 23%;
+  }
+}
+
+@media (max-width: 430px) {
+  .auth-form {
+    width: 64%;
+    left: 18%;
+  }
+}

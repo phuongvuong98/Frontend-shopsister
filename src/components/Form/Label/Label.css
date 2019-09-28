@@ -1,0 +1,7 @@
+.label {
+    text-align: center;
+    font-size: 1.4rem;
+    -webkit-text-decoration: uppercase;
+            text-decoration: uppercase;
+    font-weight: 700;
+}

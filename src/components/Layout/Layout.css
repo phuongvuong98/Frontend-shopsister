@@ -1,0 +1,25 @@
+.mainHeader {
+    position: fixed;
+    width: 24%;
+    background-color: #F1F1F1;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+
+.content {
+    float: right;
+    background-color: #777;
+    width: 76%;
+}
+
+@media (max-width: 768px) {
+    .mainHeader {
+        height: 24%;
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+    }
+}
