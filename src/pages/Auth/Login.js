@@ -28,7 +28,7 @@ class Login extends Component {
   inputChangeHandler = (input, value) => {
     this.setState(prevState => {
       let isValid = true;
-      for (const validator of prevState.loginForm[input].validators) {
+      for (var validator of prevState.loginForm[input].validators) {
         isValid = isValid && validator(value);
       }
       const updatedForm = {
@@ -40,7 +40,7 @@ class Login extends Component {
         }
       };
       let formIsValid = true;
-      for (const inputName in updatedForm) {
+      for (var inputName in updatedForm) {
         formIsValid = formIsValid && updatedForm[inputName].valid;
       }
       return {

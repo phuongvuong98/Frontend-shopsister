@@ -1,0 +1,36 @@
+.posts {
+    margin-left: 24%;
+}
+
+.post__status {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.post__status form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.post__status form * {
+    margin: 0 0.5rem;
+}
+
+.post__control {
+    text-align: center;
+}
+
+.new-post__preview-image {
+    width: 15rem;
+    height: 7rem;
+}
+
+@media (min-width: 768px) {
+    .post__status {
+        width: 30rem;
+    }
+}

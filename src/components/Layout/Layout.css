@@ -8,18 +8,52 @@
 }
 
 .content {
+    margin-top: 0;
     float: right;
-    background-color: #777;
+    background-color: #666;
     width: 76%;
+    height: 200vh;
 }
 
 @media (max-width: 768px) {
     .mainHeader {
-        height: 24%;
+        height: 28%;
         width: 100%;
     }
 
     .content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 414px) {
+
+    .mainHeader {
+        height: 25%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+
+    .mainHeader {
+        height: 28%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+
+    .mainHeader {
+        height: 40%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 240px) {
+
+    .mainHeader {
+        height: 43%;
         width: 100%;
     }
 }

@@ -13,6 +13,7 @@
   .auth-form {
     width: 54%;
     left: 23%;
+    top: 30%;
   }
 }
 
@@ -20,5 +21,12 @@
   .auth-form {
     width: 64%;
     left: 18%;
+    top: 35%;
+  }
+}
+
+@media (max-width: 240px) {
+  .auth-form {
+    top: 40%;
   }
 }

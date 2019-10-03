@@ -4,13 +4,15 @@ import { NavLink } from "react-router-dom";
 import "./NavigationItems.css";
 
 const navigationItems = props => {
+  // cac item luon hien
   var navItems = [
-    { id: "home", text: "Home", link: "/", auth: false },
-    { id: "portfolio", text: "Portfolio", link: "/portfolio", auth: false },
-    { id: "shop", text: "Shop", link: "/shop", auth: false },
-    { id: "contact", text: "Contact", link: "/contact", auth: false }
+    { id: "home", text: "Home", link: "/", auth: null },
+    { id: "portfolio", text: "Portfolio", link: "/portfolio", auth: null },
+    { id: "shop", text: "Shop", link: "/shop", auth: null },
+    { id: "contact", text: "Contact", link: "/contact", auth: null }
   ];
 
+  // cac item lien quan den authenticate
   if (props.showAuth) {
     navItems = [
       { id: "login", text: "Log In", link: "/login", auth: false },
@@ -19,6 +21,22 @@ const navigationItems = props => {
   }
 
   return [
+    // show cac item luon hien
+    ...navItems
+      .filter(item => item.auth === null)
+      .map(item => (
+        <li
+          key={item.id}
+          className={["navigation-item", props.mobile ? "mobile" : ""].join(
+            " "
+          )}
+        >
+          <NavLink to={item.link} exact onClick={props.onLoginModal}>
+            {item.text}
+          </NavLink>
+        </li>
+      )),
+    // show cac item login logout
     ...navItems
       .filter(item => item.auth === props.isAuth)
       .map(item => (
@@ -33,7 +51,8 @@ const navigationItems = props => {
           </NavLink>
         </li>
       )),
-    props.isAuth && (
+    // show item logout
+    props.isAuth && props.showAuth && (
       <li className="navigation-item" key="logout">
         <button onClick={props.onLogout}>Logout</button>
       </li>

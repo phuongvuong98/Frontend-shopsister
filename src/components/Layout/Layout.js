@@ -7,7 +7,7 @@ const layout = props => {
     <React.Fragment>
       <header className="mainHeader">{props.header}</header>
       {props.mobileNav}
-      {/* <main className={classes.content}>{props.children}</main> */}
+      {/* <main className="content">{props.children}</main> */}
     </React.Fragment>
   );
 };

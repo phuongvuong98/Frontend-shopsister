@@ -2,9 +2,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 42vh;
+  height: 50%;
   width: 100%;
-  max-height: 50%;
   background: white;
   -webkit-box-shadow: 1px 0 8px rbga(0, 0, 0, 0.26);
   box-shadow: 1px 0 8px rbga(0, 0, 0, 0.26);
@@ -61,4 +60,25 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+}
+
+@media (max-width: 375px) {
+
+  .mobile-nav {
+    height: 52%;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .mobile-nav {
+    height: 60%;
+  }
+}
+
+@media (max-width: 240px) {
+
+  .mobile-nav {
+    height: 74%;
+  }
 }
