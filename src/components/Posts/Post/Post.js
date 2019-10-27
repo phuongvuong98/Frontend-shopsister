@@ -6,7 +6,9 @@ import "./Post.css";
 
 const post = props => (
   <div className="post__image">
-    <Image imageUrl={props.image} cover center />
+    <a className="post_link" href={props.image}>
+      <Image imageUrl={props.image} cover center />
+    </a>
   </div>
 );
 

@@ -21,7 +21,6 @@ class Feed extends Component {
     editLoading: false
   };
 
-  
   componentDidMount() {
     fetch("http://localhost:8080/auth/status", {
       headers: {
@@ -266,7 +265,9 @@ class Feed extends Component {
             </div>
           )}
           {this.state.posts.length <= 0 && !this.state.postsLoading ? (
-            <p style={{ textAlign: "center" }}>No posts found.</p>
+            <p style={{ textAlign: "center", marginTop: "16rem" }}>
+              No posts found.
+            </p>
           ) : null}
           {!this.state.postsLoading && (
             <Paginator

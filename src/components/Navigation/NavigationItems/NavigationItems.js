@@ -1,13 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { Icon, List } from "semantic-ui-react";
 
 import "./NavigationItems.css";
 
 const navigationItems = props => {
-  // cac item luon hien
+  // cac item theo link /route
   var navItems = [
-    { id: "home", text: "Home", link: "/", auth: null },
-    { id: "portfolio", text: "Portfolio", link: "/portfolio", auth: null },
+    { id: "home", text: "Home", link: "/", auth: null},
+    { id: "Portfolio", text: "Portfolio", link: "https://nguyen-anh-nghiet.herokuapp.com/", auth: null , newTag: 1},
     { id: "shop", text: "Shop", link: "/shop", auth: null },
     { id: "contact", text: "Contact", link: "/contact", auth: null }
   ];
@@ -21,7 +22,7 @@ const navigationItems = props => {
   }
 
   return [
-    // show cac item luon hien
+    // show cac item luon duoc truy cap
     ...navItems
       .filter(item => item.auth === null)
       .map(item => (
@@ -31,9 +32,19 @@ const navigationItems = props => {
             " "
           )}
         >
-          <NavLink to={item.link} exact onClick={props.onLoginModal}>
-            {item.text}
-          </NavLink>
+          {
+            item.newTag == 1 && (
+              <List.Item href={item.link} target="_blank">
+                {item.text}
+              </List.Item>
+            )
+          }
+          {
+
+item.newTag != 1 && (<NavLink to={item.link} exact onClick={props.onLoginModal}>
+             {item.text}
+           </NavLink>)
+          }
         </li>
       )),
     // show cac item login logout

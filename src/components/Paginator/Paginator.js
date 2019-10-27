@@ -1,20 +1,21 @@
-import React from 'react';
+import React from "react";
 
-import './Paginator.css';
+import "./Paginator.css";
+import Button from "../Button/Button";
 
 const paginator = props => (
   <div className="paginator">
     {props.children}
     <div className="paginator__controls">
       {props.currentPage > 1 && (
-        <button className="paginator__control" onClick={props.onPrevious}>
+        <Button design="small" onClick={props.onPrevious}>
           Previous
-        </button>
+        </Button>
       )}
       {props.currentPage < props.lastPage && (
-        <button className="paginator__control" onClick={props.onNext}>
+        <Button design="small" onClick={props.onNext}>
           Next
-        </button>
+        </Button>
       )}
     </div>
   </div>

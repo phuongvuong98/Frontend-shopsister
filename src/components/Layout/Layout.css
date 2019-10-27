@@ -15,7 +15,8 @@
     height: 200vh;
 }
 
-@media (max-width: 768px) {
+
+@media screen and (max-width: 767px) {
     .mainHeader {
         height: 28%;
         width: 100%;
@@ -26,11 +27,10 @@
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) {
 
     .mainHeader {
         height: 25%;
-        width: 100%;
     }
 }
 
@@ -38,15 +38,13 @@
 
     .mainHeader {
         height: 28%;
-        width: 100%;
     }
 }
 
 @media (max-width: 320px) {
 
     .mainHeader {
-        height: 40%;
-        width: 100%;
+        height: 30%;
     }
 }
 

@@ -59,30 +59,30 @@
 }
 
 .button.button--accent {
-  border-color: #fab83f;
-  color: #fab83f;
+  border-color: #272727;
+  color: #272727;
 }
 
 .button--accent:hover,
 .button--accent:active {
-  background: #fab83f;
+  background: #272727;
   color: #4E4E4E;
 }
 
 .button--flat.button--accent:hover,
 .button--flat.button--accent:active {
-  background: rgba(250, 184, 63, 0.3);
-  color: #fab83f;
+  background: #2727271e59;
+  color: #272727;
 }
 
 .button.button--accent.button--raised {
-  background: #fab83f;
+  background: #272727;
   color: #4E4E4E;
 }
 
 .button--raised.button--accent:hover,
 .button--raised.button--accent:active {
-  background: #fbc766;
+  background: #;
 }
 
 .button.button--danger {
@@ -142,4 +142,28 @@
 
 .button--mobileToggle {
   width: 30%;
+}
+
+.button--small {
+  width: 16%;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+}
+
+@media screen and (max-width: 767px) {
+  .button--small {
+    width: 20%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .button--small {
+    width: 25%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    font-size: .9rem;
+  }
 }

@@ -24,7 +24,7 @@
   text-align: right;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .post {
     padding: 1rem;
     width: 40rem;

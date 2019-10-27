@@ -13,8 +13,9 @@ import SignupPage from "./pages/Auth/Signup";
 
 import ErrorHandler from "./components/ErrorHandler/ErrorHandler";
 import HomePage from "./pages/Home/Posts";
-import FeedPage from "./pages/Feed/Feed";
-import SinglePostPage from "./pages/Feed/SinglePost/SinglePost";
+import ShopPage from "./pages/Shop/Products";
+// import FeedPage from "./pages/Feed/Feed";
+// import SinglePostPage from "./pages/Feed/SinglePost/SinglePost";
 
 class App extends Component {
   state = {
@@ -156,12 +157,20 @@ class App extends Component {
           exact
           render={props => (
             // <HomePage userId={this.state.userId} token={this.state.token} />
-            <HomePage
-              userId={"5d9229b6427c5611410e6d89"}
-              token={
-                "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBodW9uZ3Z1b25nOThAZ21haWwuY29tIiwidXNlcklkIjoiNWQ5MjI5YjY0MjdjNTYxMTQxMGU2ZDg5IiwiaWF0IjoxNTcwMTA5NjE1LCJleHAiOjE1NzAxMTMyMTV9.zXMCOSPTWZhNt-0aNWnckQBPDceexGGUk4HQjQntDxY"
-              }
-            />
+            // <HomePage
+            //   userId={"5d9229b6427c5611410e6d89"}
+            //   token={
+            //     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBodW9uZ3Z1b25nOThAZ21haWwuY29tIiwidXNlcklkIjoiNWQ5MjI5YjY0MjdjNTYxMTQxMGU2ZDg5IiwiaWF0IjoxNTcwMTA5NjE1LCJleHAiOjE1NzAxMTMyMTV9.zXMCOSPTWZhNt-0aNWnckQBPDceexGGUk4HQjQntDxY"
+            //   }
+            // />
+            <HomePage />
+          )}
+        />
+        <Route
+          path="/shop"
+          exact
+          render={props => (
+            <ShopPage />
           )}
         />
         <Route
@@ -196,7 +205,7 @@ class App extends Component {
             path="/"
             exact
             render={props => (
-              <FeedPage userId={this.state.userId} token={this.state.token} />
+              <HomePage userId={this.state.userId} token={this.state.token} />
             )}
           />
           {/* <Route

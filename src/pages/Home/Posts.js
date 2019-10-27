@@ -1,9 +1,6 @@
 import React, { Component, Fragment } from "react";
 
 import Post from "../../components/Posts/Post/Post";
-import Button from "../../components/Button/Button";
-import FeedEdit from "../../components/Feed/FeedEdit/FeedEdit";
-import Input from "../../components/Form/Input/Input";
 import Paginator from "../../components/Paginator/Paginator";
 import Loader from "../../components/Loader/Loader";
 import ErrorHandler from "../../components/ErrorHandler/ErrorHandler";
@@ -11,14 +8,10 @@ import "./Posts.css";
 
 class Posts extends Component {
   state = {
-    isEditing: false,
     posts: [], // de load cac bai port
     totalPosts: 0,
-    editPost: null,
-    status: "",
     postPage: 1,
-    postsLoading: true,
-    editLoading: false
+    postsLoading: true
   };
 
   // sau khi da gan thi thuc hien gui len server lay post
@@ -79,8 +72,8 @@ class Posts extends Component {
           {this.state.postsLoading && (
             <div
               style={{
-                marginTop: "25%",
-                left: "62%",
+                top: "50%",
+                left: "50%",
                 position: "fixed"
               }}
             >
@@ -88,7 +81,9 @@ class Posts extends Component {
             </div>
           )}
           {this.state.posts.length <= 0 && !this.state.postsLoading ? (
-            <p style={{ textAlign: "center" }}> No posts found. </p>
+            <p style={{ textAlign: "center", marginTop: "16rem" }}>
+              No posts found.
+            </p>
           ) : null}
           {!this.state.postsLoading && (
             <Paginator

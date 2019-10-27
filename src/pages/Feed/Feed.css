@@ -4,8 +4,12 @@
 }
 
 .feed__status form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .feed__status form * {
@@ -21,7 +25,7 @@
   height: 7rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .feed__status {
     width: 30rem;
   }

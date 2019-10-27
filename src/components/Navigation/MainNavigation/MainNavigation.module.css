@@ -34,7 +34,7 @@
     padding: 0.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
     .mainNav__itemsHor {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -42,7 +42,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     .mainNav__items,
     .mainNav__itemsHor {

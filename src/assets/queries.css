@@ -1,0 +1,28 @@
+/* Big tablet to 1200px (widths smaller taht the 1140px row) */
+@media only screen and (max-width: 1200px) {}
+
+/* Small tablet to big tablet: from 767px to 1023px */
+@media only screen and (max-width: 1023px) {}
+
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {}
+
+
+/* Small phones: from 412 to 480px */
+@media only screen and (max-width: 480px) {}
+
+/* Small phones: from 385 to 411px */
+@media only screen and (max-width: 411px) {}
+
+/* Small phones: from 361 to 384px */
+@media only screen and (max-width: 384px) {}
+
+/* Super small phones: from 321 to 360px */
+@media only screen and (max-width: 360px) {}
+
+/* Super small phones: from 241 to 320px */
+@media only screen and (max-width: 320px) {}
+
+/* Super small phones: from 0 to 240px */
+@media only screen and (max-width: 240px) {}
